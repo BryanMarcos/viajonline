@@ -206,3 +206,56 @@ div.message>a{
 span.icon-shrink2{
 	margin-left: 20px;
 }
+/*****  main-travel *****/
+section.travel{width: 100%;}
+div.main-light-travel{
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+div.main-light-travel h2{
+	text-align: center;
+	color: #0078ff;
+	font-size: 60px;
+	margin-top: 80px;
+	margin-bottom: 80px;
+}
+span.icon-travel-case{margin-right:20px;}
+div.main-three>a{
+	color: #fff;
+	margin-bottom: 10px;
+	text-decoration: none;
+	width: 30%;
+	font-size: 23px;
+	border-radius: 10px;
+	padding: 5px 15px;
+	text-align: center;
+	height: 70px;
+	letter-spacing: 1px;
+	font-family: 'Rubik', sans-serif;
+}
+div.margin-top{
+	margin-top: 60px;
+	margin-bottom: 100px;
+}
+div.main-three{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+div.main-three>a.blue{
+	background-color: #0078ff;
+}
+div.main-three>a.red{
+	background-color: red;
+}
+div.main-three>a.green{
+	background-color: #28c82f;
+}
+div.text-alone{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+}
