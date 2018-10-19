@@ -1,0 +1,208 @@
+*{
+	padding: 0;
+	margin: 0;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+/*****    Main  ******/
+section.content-head{
+	position: fixed;
+	z-index: 500;
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    }
+/***** Logo-Main *****/
+div.head{
+	padding: 5px 10px 5px 10px;
+	width: 100%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	background: #fff;
+}
+div.logo{
+	background: #fff;
+	padding: 5px;
+	border-radius: 5px;
+	width: 15%;
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: center;
+	
+}
+div.planet{
+	width: 30%;
+}
+div.planet>img{width: 100%;}
+
+div.LogoText{
+	width: 70%;
+	margin-left: 5px;
+}
+div.LogoText>img{width: 100%;}
+
+/***** Nav-Main *****/
+div.main{
+	width: auto;
+	display: flex;
+	align-items: center;
+	position: relative;
+}
+div.skew{
+	background: #fff;
+	border-radius: 5px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	transform: skewX(20deg);
+	width: 100%;
+	height: 50px;
+	position: absolute;
+	z-index: 10;
+}
+div.main>nav{
+	z-index: 20;
+	padding: 10px;
+	width: 100%;
+    height: auto;}
+div.main li{
+	list-style: none;
+	display: inline-block;
+}
+div.main a{
+	color: #3498DB;
+	text-decoration: none;
+	font-size: 18px;
+	margin: 0 5px;
+}
+span.icon-macys,
+    .icon-minutemailer,
+    .icon-pinboard,
+    .icon-messenger{
+	font-size: 20px;
+	margin-right: 5px;
+}
+
+/***** body *****/
+section.content-body{width: 100%;}
+/***** banner-body *****/
+div.banner{
+	position: relative;
+	width: 100%;
+}
+div.banner>img{width: 100%;}
+/***** Content-Text-Banner *****/
+div.content-banner{
+	position: absolute;
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+}
+/***** banner-contacto *****/
+div.space{
+	width: 65%;
+	height: 200px;
+	margin-top: 130px;
+}
+div.inf-box{
+	background: rgba(36,113,163,.8);
+	width: 30%;
+	height: 200px;
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	margin-top: 130px;
+	margin-right: 50px;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+div.text-inf{
+	position: relative;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	border-bottom: 1px solid #fff;
+}
+div.text-inf>p{
+	width: 100%;
+	color: #fff;
+	padding: 5px;
+	text-align: center;
+}
+span.icon-safari{
+	padding-top: 10px;
+	position: absolute;
+	font-size: 35px;
+	color: #fff;
+}
+div.inf-box>a{
+	margin: 0 20px;
+	text-decoration: none;
+	color: #fff;
+	font-size: 20px;
+}
+span.icon-whatsapp{
+	margin-right: 5px;
+}
+div.social{
+	width: 90%;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	display: flex;
+	align-items: center;
+	padding: 0 10px;
+	justify-content: space-between;
+	background: #fff;
+}
+div.social p{
+	color: red;
+}
+span.icon-instagram1,
+    .icon-facebook1,
+    .icon-youtube1{
+    	font-size: 30px;
+    	margin-right: 5px;
+    	margin-left: 5px;
+    }
+div.redes>a{text-decoration: none;}
+/***** Banner-texto *****/
+div.message{
+	width: auto;
+	height: 200px;
+	margin-left: 50px;
+	margin-top: -30px;
+}
+div.message h2{
+	font-size: 60px;
+	color: #3d3d3d;
+}
+div.message h3{
+	color: #565656;
+	font-size: 30px;
+}
+h3.message-h3{
+	margin-top: 20px;
+}
+div.message>a{
+	color: #fff;
+	font-size: 50px;
+	margin-top: 30px;
+	padding: 10px 25px;
+	border-radius: 10px;
+	float: right;
+	text-decoration: none;
+	background: rgba(255,188,105,1);
+    background: -moz-linear-gradient(top, rgba(255,188,105,1) 0%, rgba(255,112,10,1) 65%, rgba(255,112,10,1) 100%);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(255,188,105,1)), color-stop(65%, rgba(255,112,10,1)), color-stop(100%, rgba(255,112,10,1)));
+    background: -webkit-linear-gradient(top, rgba(255,188,105,1) 0%, rgba(255,112,10,1) 65%, rgba(255,112,10,1) 100%);
+    background: -o-linear-gradient(top, rgba(255,188,105,1) 0%, rgba(255,112,10,1) 65%, rgba(255,112,10,1) 100%);
+    background: -ms-linear-gradient(top, rgba(255,188,105,1) 0%, rgba(255,112,10,1) 65%, rgba(255,112,10,1) 100%);
+    background: linear-gradient(to bottom, rgba(255,188,105,1) 0%, rgba(255,112,10,1) 65%, rgba(255,112,10,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffbc69', endColorstr='#ff700a', GradientType=0 );
+}
+span.icon-shrink2{
+	margin-left: 20px;
+}
