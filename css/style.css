@@ -1,3 +1,4 @@
+/***** General-configurations *****/
 *{
 	padding: 0;
 	margin: 0;
@@ -5,18 +6,25 @@
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
 }
-
+a{text-decoration: none;}
+img{width: 100%;}
+.width100{width: 100%;}
+.width90{width: 90%;}
+div.flex{
+	display: flex;
+	flex-wrap: wrap;
+	margin-left: auto;
+	margin-right: auto;
+}
 /*****    Main  ******/
 section.content-head{
 	position: fixed;
 	z-index: 500;
-	width: 100%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     }
 /***** Logo-Main *****/
 div.head{
 	padding: 5px 10px 5px 10px;
-	width: 100%;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
@@ -32,16 +40,11 @@ div.logo{
 	justify-content: center;
 	
 }
-div.planet{
-	width: 30%;
-}
-div.planet>img{width: 100%;}
-
+div.planet{width: 30%;}
 div.LogoText{
 	width: 70%;
 	margin-left: 5px;
 }
-div.LogoText>img{width: 100%;}
 
 /***** Nav-Main *****/
 div.main{
@@ -55,7 +58,6 @@ div.skew{
 	border-radius: 5px;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 	transform: skewX(20deg);
-	width: 100%;
 	height: 50px;
 	position: absolute;
 	z-index: 10;
@@ -63,7 +65,6 @@ div.skew{
 div.main>nav{
 	z-index: 20;
 	padding: 10px;
-	width: 100%;
     height: auto;}
 div.main li{
 	list-style: none;
@@ -71,7 +72,6 @@ div.main li{
 }
 div.main a{
 	color: #3498DB;
-	text-decoration: none;
 	font-size: 18px;
 	margin: 0 5px;
 }
@@ -86,15 +86,10 @@ span.icon-macys,
 /***** body *****/
 section.content-body{width: 100%;}
 /***** banner-body *****/
-div.banner{
-	position: relative;
-	width: 100%;
-}
-div.banner>img{width: 100%;}
+div.banner{position: relative;}
 /***** Content-Text-Banner *****/
 div.content-banner{
 	position: absolute;
-	width: 100%;
 	display: flex;
 	flex-wrap: wrap;
 }
@@ -119,9 +114,6 @@ div.text-inf{
 	position: relative;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
 	margin-bottom: auto;
 	border-bottom: 1px solid #fff;
 }
@@ -139,17 +131,11 @@ span.icon-safari{
 }
 div.inf-box>a{
 	margin: 0 20px;
-	text-decoration: none;
 	color: #fff;
 	font-size: 20px;
 }
-span.icon-whatsapp{
-	margin-right: 5px;
-}
+span.icon-whatsapp{margin-right: 5px;}
 div.social{
-	width: 90%;
-	margin-right: auto;
-	margin-left: auto;
 	margin-bottom: 10px;
 	display: flex;
 	align-items: center;
@@ -157,17 +143,14 @@ div.social{
 	justify-content: space-between;
 	background: #fff;
 }
-div.social p{
-	color: red;
-}
+div.social p{color: red;}
 span.icon-instagram1,
     .icon-facebook1,
-    .icon-youtube1{
+    .icon-twitter1{
     	font-size: 30px;
     	margin-right: 5px;
     	margin-left: 5px;
     }
-div.redes>a{text-decoration: none;}
 /***** Banner-texto *****/
 div.message{
 	width: auto;
@@ -208,11 +191,6 @@ span.icon-shrink2{
 }
 /*****  main-travel *****/
 section.travel{width: 100%;}
-div.main-light-travel{
-	width: 90%;
-	margin-left: auto;
-	margin-right: auto;
-}
 div.main-light-travel h2{
 	text-align: center;
 	color: #0078ff;
@@ -221,10 +199,10 @@ div.main-light-travel h2{
 	margin-bottom: 80px;
 }
 span.icon-travel-case{margin-right:20px;}
+div.main-three{justify-content: space-between;}
 div.main-three>a{
 	color: #fff;
 	margin-bottom: 10px;
-	text-decoration: none;
 	width: 30%;
 	font-size: 23px;
 	border-radius: 10px;
@@ -233,15 +211,11 @@ div.main-three>a{
 	height: 70px;
 	letter-spacing: 1px;
 	font-family: 'Rubik', sans-serif;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 div.margin-top{
 	margin-top: 60px;
 	margin-bottom: 100px;
-}
-div.main-three{
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
 }
 div.main-three>a.blue{
 	background-color: #0078ff;
@@ -257,5 +231,65 @@ div.text-alone{
 	justify-content: center;
 	align-items: center;
 	height: 100%;
-	width: 100%;
 }
+/***** main-travel/postcard *****/
+div.postcard-travel{justify-content: space-between;}
+div.travel{
+	display: flex;
+	flex-wrap: wrap;
+	width: 30%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	margin-bottom: 20px;
+}
+div.travel-img{width: 100%}
+div.travel-inf h3{
+	font-family: 'Rubik', sans-serif;
+	text-align: center;
+	margin-top: 10px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 10px;
+	color:#0078ff;
+	font-size: 25px;
+	letter-spacing: 1px;
+}
+div.title-card{
+	height: 45px;
+}
+div.button-itinerario{
+	justify-content: space-between;
+	height: 40px;
+}
+div.button-itinerario>a{
+	background: #0078ff;
+	color: #fff;
+	font-size: 20px;
+	padding: 5px 10px;
+	border-radius: 10px;
+}
+div.inf{
+	justify-content: space-between;
+	margin-bottom: 10px;
+}
+div.inf p{
+	font-size: 18px;
+	letter-spacing: .5px;
+	color: #424242;
+}
+span.icon-date-add{margin-right: 10px;}
+span.icon-brightness-up{margin-right: 20px;}
+div.pay{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+div.pay p{
+	font-family: 'Rubik', sans-serif;
+	font-size: 25px;
+	text-align: right;
+	color: #4e4e4e;
+}
+
+
+
+
+
