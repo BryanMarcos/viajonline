@@ -27,7 +27,7 @@
 				<li><a href="#inicio"><span class="icon-macys"></span>Inicio</a></li>
 				<li><a href="#viajes"><span class="icon-minutemailer"></span>Destinos</a></li>
 				<li><a href="#map"><span class="icon-pinboard"></span>Visitanos</a></li>
-				<li><a href=""><span class="icon-messenger"></span>Contactanos</a></li>
+				<li><a href="#contacto"><span class="icon-messenger"></span>Contactanos</a></li>
 			</ul>
 		 </nav>
 	   </div>
@@ -220,24 +220,51 @@
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3791.5234598011793!2d-94.46801528558753!3d18.13978468763188!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85e983763f387fa9%3A0x87ca7fabce8b0be6!2sViajonline+Agencia+de+Viajes!5e0!3m2!1ses!2smx!4v1540220913891"  frameborder="0" style="border:0" allowfullscreen></iframe>
 </section>
 
-<footer class="width100">
+<footer class="width100" id="contacto">
 	<div class="form width90 flex">
 		<form action="">
-	               <div class="form-data">
-	               	  <h2 class="width100">Contáctanos</h2>
-	                  <input type="text" placeholder="Nombre:">
-	                  <input type="email" placeholder="Correo:">
-	                  <input type="text" placeholder="Telefono:">
-	                  <h3>Paquete de interes</h3>
-	                  <label for="paquete1">San cristobal de las casas y Lagos de montebello</label>
-	                  <input type="radio" name="paquete" id="paquete1" value="San cristobal de las casas y Lagos de montebello" checked>
-	                  <label for="paquete2">Vuelo en globo y Salto en paracaidas</label>
-	                  <input type="radio" name="paquete" value="Vuelo en globo y Salto en paracaidas" id="paquete2">
-	                  <label for="paquete3">Guadalajara</label>
-	                  <input type="radio" name="paquete" value="Guadalajara" id="paquete3">
-	                  <label for="paquete4">Pueblos magicos</label>
-	                  <input type="radio" name="paquete" value="Pueblos magicos" id="paquete4">
+	                <div class="flex">
+	                	<div class="form-data">
+	                		    <h2 class="width100">Contáctanos</h2>
+	                	        <input type="text" placeholder="Nombre:">
+	                	        <input type="email" placeholder="Correo:">
+	                	        <input type="text" placeholder="Telefono:">
+	                	        <h3 class="width100">Paquete de interes</h3>
+	                	        <div class="package">
+	                	        	<label for="paquete1">San cristobal de las casas y </br>Lagos de montebello</label>
+	                	        	<input type="radio"  class="radiobtn" name="paquete" id="paquete1" value="San cristobal de las casas y Lagos de montebello" checked>
+	                	        	<span></span>
+	                	        </div>
+	                	        <div class="package">
+	                	         	<label for="paquete2">Vuelo en globo y Salto en paracaidas</label>
+	                	        	<input type="radio" class="radiobtn" name="paquete" value="Vuelo en globo y Salto en paracaidas" id="paquete2">
+	                	         	<span></span>
+	                	        </div>
+	                	        <div class="package">
+	                	  	        <label for="paquete3">Guadalajara</label>
+	                	  	        <input type="radio" class="radiobtn" name="paquete" value="Guadalajara" id="paquete3">
+	                	  	        <span></span>
+	                	        </div>
+	                	        <div class="package">
+	                	        	<label for="paquete4">Pueblos magicos</label>
+	                	        	<input type="radio" class="radiobtn" name="paquete" value="Pueblos magicos" id="paquete4">
+	                	  	        <span></span>
+	                	        </div>
+	                	 </div>
+	                	<div class="form-message flex">
+	                		<textarea name="" id="" placeholder="Escribenos"></textarea>
+	                		<input type="submit" value="Enviar" class="button">
+	                		<div class="call width100 flex">
+	                			<p>!Comunícate con nosotros¡</p>
+	                			<a href="tel:+529211630438"><span class="icon-whatsapp"></span><span>01 921 163 0438</span></a>
+	                		</div>
+
+	                		
+	                	</div>
 	                </div>
+	        <div class="autor flex">
+                <p class="copy">Viajonline &copy; 2018</p>
+            </div>
 		</form>
 	</div>
 </footer>
