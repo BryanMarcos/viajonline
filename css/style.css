@@ -71,8 +71,9 @@ div.main li{
 	display: inline-block;
 }
 div.main a{
+	font-family: 'Open Sans', sans-serif;
 	color: #3498DB;
-	font-size: 18px;
+	font-size: 15px;
 	margin: 0 5px;
 }
 span.icon-macys,
@@ -244,7 +245,7 @@ div.travel{
 	flex-wrap: wrap;
 	width: 30%;
 	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-	margin-bottom: 20px;
+	margin-bottom: 50px;
 }
 div.travel-img{width: 100%}
 div.travel-inf h3{
@@ -277,6 +278,7 @@ div.inf{
 	margin-bottom: 10px;
 }
 div.inf p{
+	font-family: 'Open Sans', sans-serif;
 	font-size: 18px;
 	letter-spacing: .5px;
 	color: #424242;
@@ -309,6 +311,7 @@ section.map iframe{
 }
 /***** Footer *****/
 footer{
+	font-family: 'Open Sans', sans-serif;
 	background-image: url(../img/travel.jpg);
 	background-size: cover;
 }
@@ -328,7 +331,7 @@ div.form-message{
 	align-items: center;
 	width: 50%;
 	max-width: 300px;
-	max-height: 300px;
+	max-height: 400px;
 }
 div.form-data h2{
 	color: #fff;
@@ -413,9 +416,18 @@ div.call a{color: #fff;}
 div.call p{
 	width: 100%;
 	color: #fff;
-	font-size: 20px;
+	font-size: 15px;
 	margin-bottom: 10px;
 	letter-spacing: .5px;
+}
+div.social-footer{
+	margin-top: 10px;
+}
+div.social-footer p{
+	widows: 100%;
+	margin-top: 10px;
+	color: #fff;
+	font-size: 15px
 }
 div.autor{
 	width: 100%;
