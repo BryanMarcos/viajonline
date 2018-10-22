@@ -24,7 +24,7 @@ section.content-head{
     }
 /***** Logo-Main *****/
 div.head{
-	padding: 5px 10px 5px 10px;
+	padding: 0 10px 0 10px;
 	display: flex;
 	flex-wrap: nowrap;
 	justify-content: space-between;
@@ -233,7 +233,12 @@ div.text-alone{
 	height: 100%;
 }
 /***** main-travel/postcard *****/
-div.postcard-travel{justify-content: space-between;}
+div.margin{
+	width: 100%;
+	height: 70px;
+}
+div.postcard-travel{
+	justify-content: space-between;}
 div.travel{
 	display: flex;
 	flex-wrap: wrap;
@@ -288,7 +293,41 @@ div.pay p{
 	text-align: right;
 	color: #4e4e4e;
 }
-
+/***** Section-Map *****/
+div.margin-map{
+	width: 100%;
+	height: 50px;
+}
+section.map{
+	margin: 30px 0 0 0;
+}
+section.map iframe{
+	width: 100%;
+	height: 550px;
+	max-width: 1400px;
+	min-height: 100px;
+}
+/***** Footer *****/
+footer{
+	background-color: #28c82f;
+}
+form{width: 70%;}
+div.form-data{width: 50%;}
+div.form-data h2{
+	color: #fff;
+	font-size: 60px;
+	margin: 50px 0;
+}
+input[type="text"],
+input[type="email"]{
+	width: 100%;
+	margin-bottom: 10px;
+	background: rgba(0,0,0,0);
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-bottom: 1px solid #fff;
+}
 
 
 
