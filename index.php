@@ -1,38 +1,137 @@
+<?php
+
+$errores = '';
+$enviado = '';
+
+if (isset($_POST['form-inicio'])) {
+	$nombre = $_POST['nombre'];
+	$correo = $_POST['correo'];
+	$telefono = $_POST['telefono'];
+	$mensaje = $_POST['mensaje'];
+	$paquete = $_POST['paquete'];
+
+
+	//Validación de nombre del formulario inicio 
+	if (!empty($nombre)) {
+		$nombre = trim($nombre);
+		$nombre = filter_var($nombre, FILTER_SANITIZE_STRING);
+	}elseif (empty($nombre)) {
+		$errores .= '<p>* Por favor ingrese un nombre</p>';
+	}
+	//validacion de correo del fomulario inicio
+	if (!empty($correo)) {
+		$correo = filter_var($correo, FILTER_SANITIZE_EMAIL);
+		if (!filter_var($correo, FILTER_SANITIZE_EMAIL)) {
+			$errores .= '<p>* Correo invalido</p>';
+		}
+	}elseif (empty($correo)) {
+		$errores .= '<p>* Por favor ingrese un correo</p>';
+	}
+	//validacion de numero telefonico
+	if (empty($telefono)) {
+		$errores .= '<p>*Ingresa un numero valido';
+	}
+	//validacion de paquete del formulario
+	if (empty($paquete)) {
+		$errores .= '<p>*Elige el viaje de interes';
+
+	} 
+
+	//validacion de mensaje en fomulario inicio
+	if(!empty($mensaje)){
+		$mensaje = htmlspecialchars($mensaje);
+		$mensaje = trim($mensaje);
+		$mensaje = stripslashes($mensaje);
+
+	}elseif (empty($mensaje)) {
+		$errores .= '<p>* Por favor escribe tu mensaje</p>';
+	}
+
+	if (empty($errores)) {
+
+		$texto=       
+		"<html> 
+            <head></head>
+            <body>
+                  <h1>Formulario de Contacto</h1> 
+                  <p><b>De: </b>$nombre</p> 
+                  <p><b>Correo: </b>$correo</p> 
+                  <p><b>Mensaje: </b> $mensaje</p> 
+            </body>
+      </html>";
+      $cabeceras = "MIME-Version: 1.0" . "\r\n";
+      $cabeceras .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+      $para = 'paquetes@viajonline.com.mx';
+      $titulo = 'Formulario de contacto(inicio)';
+	  $enviado = 'true';
+	  mail($para,$titulo,$texto,$cabeceras);
+	}
+
+}
+
+?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
+	<meta name="description" content="Tomate unas vacaciones y viaja con Viajonline. Porque viajar es disfrutar">
+	<meta name="author" content="Viajonline"/>
+	<meta http-equiv="cache-control" content="no-cache"/>	
+	<meta name="robots" content="noodp">
+	<meta property="og:locale" content="es_ES"/>
+	<meta proporty="og:type" content="website" />
+	<meta property="og:title" content="Viajonline" />
+	<meta property="og:description" content="Tomate unas vacaciones y viaja con Viajonline. Porque viajar es disfrutar" />
+	<meta property="og:url" content="https://viajonline.com.mx/" />
+	<meta property="og:site_name" content="Viajonline">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/fonts/style.css">
+	<link rel="stylesheet" href="css/RD.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link href="https://fonts.googleapis.com/css?family=Rubik:700" rel="stylesheet"> 
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,600,600i,700" rel="stylesheet">
+	<link rel="shortcut icon" href="img/icon.png">
 	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Viajonline</title>
 </head>
 <body>
-
 <section class="width100 content-head">
 	<div class="width100 head">
-		<div class="logo">
-            <div class="planet">
-		         <img src="img/Viajonline.jpg" alt="">
+    <a href="#inicio"><div class="logo Desk">
+	    <div class="planet">
+	         <img src="img/viajonline.jpg" alt="">
+	    </div>
+	            <div class="LogoText">
+	                <img src="img/viajonline-2.jpg" alt="">
+	    </div>
+	        </div></a>
+    <div class="main">
+    	<div class="width100 skew"></div>
+	        <div class="topnav" id="myTopnav">
+                <nav class="width100">
+
+                    <a href="#inicio " class="active RD">
+                     	<div class="logo">
+	                        <div class="planet">
+	                            <img src="img/viajonline.jpg" alt="">
+	                        </div>
+                            <div class="LogoText">
+                                <img src="img/viajonline-2.jpg" alt="">
+	                        </div>
+                        </div>
+                    </a>
+	                 <a href="#inicio"><span class="icon-macys"></span>Inicio</a>
+	                 <a href="#viajes"><span class="icon-minutemailer"></span>Destinos</a>
+	                 <a href="#map"><span class="icon-pinboard"></span>Visitanos</a>
+	                 <a href="#contacto"><span class="icon-messenger"></span>Contáctanos</a>
+	                 <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+	                 <i class="fa fa-bars"></i></a>
+	        
+                </nav>
 	        </div>
-	        <div class="LogoText">
-		         <img src="img/Viajonline-2.jpg" alt="">
-	        </div>
-		</div>
-    
-	   <div class="main">
-	   	<div class="width100 skew"></div>
-	 	 <nav class="width100">
-			<ul>
-				<li><a href="#inicio"><span class="icon-macys"></span>Inicio</a></li>
-				<li><a href="#viajes"><span class="icon-minutemailer"></span>Destinos</a></li>
-				<li><a href="#map"><span class="icon-pinboard"></span>Visitanos</a></li>
-				<li><a href="#contacto"><span class="icon-messenger"></span>Contactanos</a></li>
-			</ul>
-		 </nav>
-	   </div>
-	</div>
+    </div>
+   </div>
+
 </section>
 <section class="content-body" id="inicio">
 	<div class="width100 banner">
@@ -50,7 +149,7 @@
 				    <p>Siguenos en</p>
 				    <div class="redes">
 				    	<a href="https://www.instagram.com/viajonline/?fbclid=IwAR3fwIBChwd2go8k7YA1Fvg_PvpgaQTiVAWW-lNIx7msG7WqT9enLB2-JjY" target="_blank"><span class="icon-instagram1"></span></a>
-				    	<a href=""><span class="icon-facebook1"></span></a>
+				    	<a href="https://www.facebook.com/ViajonlineAgenciaDeViajes/" target="_blank"><span class="icon-facebook1"></span></a>
 				    	<a href="https://twitter.com/AVViajOnline?fbclid=IwAR05J70HNErfI0pwhdZQXzGbimG__PrVt9qlPTF5vSq92dcEYd7CHJxzAkA" target="_blank"><span class="icon-twitter1"></span></a>
 				    </div>
 			   </div>
@@ -74,11 +173,9 @@
 				<a href="#san-cristobal" class="blue"><div class="width100 text-alone">San cristobal y Lagos de montebello</div></a>
 				<a href="#vuelo-globo" class="red"><div class="width100 text-alone">Vuelo en globo y Salto en paracaidas</div></a>
 				<a href="#guadalajara" class="green"><div class="width100 text-alone">Guadalajara</div></a>
-			</div>
-			<div class="width100 flex main-three margin-top">
 				<a href="#pueblos-magicos" class="blue"><div class="width100 text-alone">Pueblos magicos</br>(Puebla)</div></a>
 			</div>
-		
+
 	</div>
 	<div class="width90 flex postcard-travel">
 		<div class="margin" id="viajes"></div>
@@ -105,8 +202,8 @@
 				</div>
 				<div class="width90 flex button-itinerario">
 					<div class="space-iti"></div>
-					<a href="#"><div class="width100 text-alone">
-						Itinerario<span class="icon-shrink2"></span>
+					<a href="#contacto"><div class="width100 text-alone">
+						Más información<span class="icon-shrink2"></span>
 					</div></a>
 				</div>
 				<div class="width90 flex pay">
@@ -138,8 +235,8 @@
 				</div>
 				<div class="width90 flex button-itinerario">
 					<div class="space-iti"></div>
-					<a href="#"><div class="width100 text-alone">
-						Itinerario<span class="icon-shrink2"></span>
+					<a href="#contacto"><div class="width100 text-alone">
+						Más información<span class="icon-shrink2"></span>
 					</div></a>
 				</div>
 				<div class="width90 flex pay">
@@ -170,8 +267,8 @@
 				</div>
 				<div class="width90 flex button-itinerario">
 					<div class="space-iti"></div>
-					<a href="#"><div class="width100 text-alone">
-						Itinerario<span class="icon-shrink2"></span>
+					<a href="#contacto"><div class="width100 text-alone">
+						Más información<span class="icon-shrink2"></span>
 					</div></a>
 				</div>
 				<div class="width90 flex pay">
@@ -180,9 +277,7 @@
 			</div>
 
 		</div>
-	</div>
-	<div class="width90 flex postcard-travel">
-			<div class="travel 1" id="pueblos-magicos">
+		<div class="travel 1" id="pueblos-magicos">
 				<div class="travel-img">
 					<img src="img/pueblos-magicos.jpg" alt="">
 				</div>
@@ -205,8 +300,8 @@
 					</div>
 					<div class="width90 flex button-itinerario">
 						<div class="space-iti"></div>
-						<a href="#"><div class="width100 text-alone">
-							Itinerario<span class="icon-shrink2"></span>
+						<a href="#contacto"><div class="width100 text-alone">
+							Más información<span class="icon-shrink2"></span>
 						</div></a>
 					</div>
 					<div class="width90 flex pay">
@@ -214,7 +309,8 @@
 					</div>
 				</div>
 			</div> 
-		</div>		
+	</div>
+	
 </section>
 <div class="margin-map" id="map"></div>
 <section class="map width100">
@@ -222,18 +318,18 @@
 </section>
 
 <footer class="width100" id="contacto">
-	<div class="form width90 flex">
-		<form action="" method="post">
+	<div class="form flex">
+		<form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']);?>" method="post">
 	                <div class="flex">
 	                	<div class="form-data">
 	                		    <h2 class="width100">Contáctanos</h2>
-	                	        <input type="text" placeholder="Nombre:">
-	                	        <input type="email" placeholder="Correo:">
-	                	        <input type="text" placeholder="Telefono:">
+	                	        <input type="text" placeholder="Nombre:" name="nombre">
+	                	        <input type="email" placeholder="Correo:" name="correo">
+	                	        <input type="text" placeholder="Telefono:" name="telefono" pattern="[0-9]+">
 	                	        <h3 class="width100">Paquete de interes</h3>
 	                	        <div class="package">
 	                	        	<label for="paquete1">San cristobal de las casas y </br>Lagos de montebello</label>
-	                	        	<input type="radio"  class="radiobtn" name="paquete" id="paquete1" value="San cristobal de las casas y Lagos de montebello" checked>
+	                	        	<input type="radio"  class="radiobtn" name="paquete" id="paquete1" value="San cristobal de las casas y Lagos de montebello">
 	                	        	<span></span>
 	                	        </div>
 	                	        <div class="package">
@@ -253,19 +349,30 @@
 	                	        </div>
 	                	 </div>
 	                	<div class="form-message flex">
-	                		<textarea name="" id="" placeholder="Escribe aqui tu mensaje"></textarea>
-	                		<input type="submit" value="Enviar" class="button">
+	                		<textarea name="mensaje" id="" placeholder="Escribe aqui tu mensaje"></textarea>
+	                		<div class="button">
+	                			<input type="submit" value="Enviar" class="button" name="form-inicio">
+	                		</div>
 	                		<div class="call width100 flex">
 	                			<p>!Comunícate con nosotros¡</p>
 	                			<a href="tel:+529211630438"><span class="icon-whatsapp"></span><span>01 921 163 0438</span></a>
 	                		</div>
 	                		<div class="social-footer width100">	
 	                			<a href="https://www.instagram.com/viajonline/?fbclid=IwAR3fwIBChwd2go8k7YA1Fvg_PvpgaQTiVAWW-lNIx7msG7WqT9enLB2-JjY" target="_blank"><span class="icon-instagram1"></span></a>
-				    	        <a href=""><span class="icon-facebook1"></span></a>
+				    	        <a href="https://www.facebook.com/ViajonlineAgenciaDeViajes/" target="_blank"><span class="icon-facebook1"></span></a>
 				    	        <a href="https://twitter.com/AVViajOnline?fbclid=IwAR05J70HNErfI0pwhdZQXzGbimG__PrVt9qlPTF5vSq92dcEYd7CHJxzAkA" target="_blank"><span class="icon-twitter1"></span></a>
 				    	        <p>Siguenos en nuestras redes sociales</p>
 	                		</div>
 
+				    	        <?php if(!empty($errores)):?>
+			     			        <div class="alert error">
+			     			   	<?php echo $errores;?>
+			     		        	</div>
+			     		        <?php elseif(!empty($enviado)):?>
+			     			        <div class="alert succes">
+			     				        <p>Mensaje enviado</p>
+			     			        </div>
+			     		        <?php endif?>
 	                		
 	                	</div>
 	                </div>
@@ -276,6 +383,15 @@
 	</div>
 </footer>
 
-
+<script>
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+</script>
 </body>
 </html>
